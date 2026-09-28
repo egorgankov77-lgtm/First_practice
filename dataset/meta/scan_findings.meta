@@ -1,0 +1,27 @@
+dataset_name: basic_flask_security_scan
+version: 1.0
+date: 2026-09-28
+project: basic-flask-template-master
+target: http://127.0.0.1:5000
+target_ip: 127.0.0.1
+target_scope: local Flask development server owned/controlled for the laboratory exercise
+tools_used:
+  - Bandit
+  - Nikto 2.1.5
+bandit_result:
+  status: clean
+  total_lines_of_code: 30
+  issues_high: 0
+  issues_medium: 0
+  issues_low: 0
+  files_skipped: 0
+nikto_result:
+  target_port: 5000
+  items_checked: 6544
+  errors: 0
+  reported_items: 3
+raw_results:
+  - raw/bandit_result.json
+  - raw/bandit_result.txt
+  - raw/nikto_report.html
+dataset_note: Severity values in scan_findings.csv are the dataset/expert classification; Nikto itself did not emit a severity level for these three messages.

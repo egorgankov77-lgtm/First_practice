@@ -1,0 +1,4 @@
+finding_id,tool,target_ip,port,severity,category,description,expert_comment
+NIKTO-001,Nikto,127.0.0.1,5000,Informational,Server Information,Nikto identified the server as Werkzeug/3.1.9 running on Python/3.14.4.,Informational fingerprinting result; review whether server/version disclosure is acceptable for the deployment context.
+NIKTO-002,Nikto,127.0.0.1,5000,Medium,Missing Security Header,The X-Frame-Options header is not present.,"Add an anti-clickjacking control, preferably through an appropriate security-header policy such as CSP frame-ancestors and/or X-Frame-Options where applicable."
+NIKTO-003,Nikto,127.0.0.1,5000,Review,Potential Debug Endpoint,Nikto reported /console as potentially interesting (OSVDB-3092).,Verify whether a debug console is exposed. The application was launched with Flask debug mode enabled; debug mode must not be enabled in a production deployment.
